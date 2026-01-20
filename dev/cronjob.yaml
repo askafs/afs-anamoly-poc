@@ -11,4 +11,5 @@ spec:
           containers:
           - name: anomaly-detector
             image: afs/ai-anomaly-detector:latest
+            imagePullPolicy: IfNotPresent
           restartPolicy: OnFailure
