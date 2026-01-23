@@ -29,12 +29,12 @@ df["anomaly_score"] = model.fit_predict(
 
 # Step 4: Human-readable output
 df["status"] = df["anomaly_score"].apply(
-    lambda x: "❌ Anomaly" if x == -1 else "✅ Normal"
+    lambda x: "Anomaly" if x == -1 else "Normal"
 )
 
 # Step 5: Output results
-print("\n🔍 AI-Driven Log Anomaly Detection Results:\n")
+print("\n AI-Driven Log Anomaly Detection Results:\n")
 print(df[["timestamp", "level", "message", "status"]])
 
-print("\n🚨 Detected Anomalies:\n")
-print(df[df["status"] == "❌ Anomaly"])
+print("\n Detected Anomalies:\n")
+print(df[df["status"] == " Anomaly"])
